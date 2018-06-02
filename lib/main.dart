@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'infiniteanimation.dart';
 import 'simple.dart';
 import 'simplewidget.dart';
+import 'tweetanimation.dart';
 import 'usinganimatedbuilder.dart';
 
 void main() => runApp(new MaterialApp(
@@ -76,6 +77,17 @@ class _HomeAppState extends State<HomeApp> with SingleTickerProviderStateMixin {
                     context,
                     new MaterialPageRoute(
                         builder: (context) => new LogoBuilderApp()));
+            },
+          )),
+          new Padding(
+          padding: new EdgeInsets.all(16.0),
+                  child: new RaisedButton(
+            child: new Text('Tween Animation'),
+            onPressed: () {
+              Navigator.push(
+                    context,
+                    new MaterialPageRoute(
+                        builder: (context) => new TweenLogoApp()));
             },
           ),
         )
